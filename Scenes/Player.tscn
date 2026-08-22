@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://k8b0uqw5ouek"]
+
+[ext_resource type="Script" uid="uid://coy033gl0t6ni" path="res://Scripts/player.gd" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://n3fgqjtwpv8w" path="res://Assets/characters/c1.png" id="1_rpqav"]
+[ext_resource type="Texture2D" uid="uid://ctstjmixjkkeo" path="res://Assets/shadows/ss3.png" id="3_gntrk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lh34q"]
+size = Vector2(9, 5)
+
+[sub_resource type="Animation" id="Animation_kyqiw"]
+resource_name = "Idle"
+length = 0.39999999999999997
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [12, 13]
+}
+
+[sub_resource type="Animation" id="Animation_gntrk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_dewec"]
+resource_name = "Walk"
+length = 0.39999999999999997
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5ixxa"]
+_data = {
+&"Idle": SubResource("Animation_kyqiw"),
+&"RESET": SubResource("Animation_gntrk"),
+&"Walk": SubResource("Animation_dewec")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1774169421]
+script = ExtResource("1_kyqiw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=158340921]
+texture = ExtResource("1_rpqav")
+hframes = 6
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=771207872]
+position = Vector2(-0.5, 7.5)
+shape = SubResource("RectangleShape2D_lh34q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1149176688]
+zoom = Vector2(3.5, 3.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1419501261]
+libraries/ = SubResource("AnimationLibrary_5ixxa")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1611075472]
+position = Vector2(0, 10)
+texture = ExtResource("3_gntrk")

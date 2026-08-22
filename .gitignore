@@ -1,0 +1,63 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot 3.x (por compatibilidad si alguna vez aparece)
+.import/
+
+# Exportaciones / builds
+/export/
+/exports/
+/build/
+
+# Archivos de configuración locales
+export.cfg
+export_credentials.cfg
+
+# Mono / C# si no utilizas C#
+.mono/
+
+# IDEs / editores
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Logs
+*.log
+
+# Archivos compilados
+*.pdb
+*.mdb
+
+# Ejecutables generados localmente
+*.exe
+*.x86_64
+*.apk
+*.aab
+*.appimage
+*.dmg
+*.deb
+
+# Android
+.gradle/
+local.properties
+
+# Importante: NO ignorar los assets del juego
+# .png
+# .jpg
+# .jpeg
+# .webp
+# .ogg
+# .wav
+# .mp3
