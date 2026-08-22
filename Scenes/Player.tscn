@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://coy033gl0t6ni" path="res://Scripts/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://n3fgqjtwpv8w" path="res://Assets/characters/c1.png" id="1_rpqav"]
-[ext_resource type="Texture2D" uid="uid://ctstjmixjkkeo" path="res://Assets/shadows/ss3.png" id="3_gntrk"]
+[ext_resource type="Texture2D" uid="uid://lckcdwqguy3e" path="res://Assets/shadows/ss2.png" id="3_gntrk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lh34q"]
 size = Vector2(9, 5)
 
 [sub_resource type="Animation" id="Animation_kyqiw"]
 resource_name = "Idle"
-length = 0.39999999999999997
+length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -41,7 +41,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_dewec"]
 resource_name = "Walk"
-length = 0.39999999999999997
+length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -64,6 +64,7 @@ _data = {
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1774169421]
+platform_floor_layers = 0
 script = ExtResource("1_kyqiw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=158340921]
