@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://desltvejbicwl"]
+
+[ext_resource type="Texture2D" uid="uid://exy60vlpo86x" path="res://Assets/enemies/e1.png" id="1_m1htj"]
+[ext_resource type="Script" uid="uid://bxe720ct5rli" path="res://Scenes/enemyBat.gd" id="1_wovta"]
+[ext_resource type="Texture2D" uid="uid://csnaqoo2jtecu" path="res://Assets/shadows/ss3.png" id="3_fse1u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0duit"]
+radius = 9.0
+
+[sub_resource type="Animation" id="Animation_wovta"]
+resource_name = "Fly"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.20083117),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_fse1u"]
+resource_name = "Hurt"
+length = 0.19999999999999998
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_xeo28"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kpr8r"]
+_data = {
+&"Fly": SubResource("Animation_wovta"),
+&"Hurt": SubResource("Animation_fse1u"),
+&"RESET": SubResource("Animation_xeo28")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=377056743 groups=["Enemies"]]
+platform_floor_layers = 4294901760
+script = ExtResource("1_wovta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=541166551]
+shape = SubResource("CircleShape2D_0duit")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=779726854]
+texture = ExtResource("1_m1htj")
+hframes = 2
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1375737090]
+root_node = NodePath("../CollisionShape2D")
+libraries/ = SubResource("AnimationLibrary_kpr8r")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1686173854]
+position = Vector2(0.5000007, 14)
+scale = Vector2(1.3125001, 1)
+texture = ExtResource("3_fse1u")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dchx3o3te3rn"]
+
+[ext_resource type="Script" uid="uid://dsfer0a0bevrj" path="res://Scripts/Bullet.gd" id="1_4s4u5"]
+[ext_resource type="Texture2D" uid="uid://bgxvnqtl44t23" path="res://Assets/weapons/gun_p.png" id="2_7281b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vtqy"]
+size = Vector2(15, 6)
+
+[node name="Area2D" type="Area2D" unique_id=258976042]
+script = ExtResource("1_4s4u5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=74175827]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_0vtqy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=166278538]
+texture = ExtResource("2_7281b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

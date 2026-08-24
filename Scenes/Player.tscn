@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://b8fhyutg76al6"]
+
+[ext_resource type="Script" uid="uid://byjrvgk4ucyc2" path="res://Scripts/Player.gd" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://bddb4gysbmnyj" path="res://Assets/characters/c1.png" id="1_rpqav"]
+[ext_resource type="Texture2D" uid="uid://csnaqoo2jtecu" path="res://Assets/shadows/ss3.png" id="3_gntrk"]
+[ext_resource type="PackedScene" uid="uid://fbkap2bmn8y3" path="res://Scenes/Gun.tscn" id="4_dewec"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0duit"]
+size = Vector2(9, 4)
+
+[sub_resource type="Animation" id="Animation_5ixxa"]
+resource_name = "Hurt"
+length = 0.19999999999999998
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_kyqiw"]
+resource_name = "Idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [12, 13]
+}
+
+[sub_resource type="Animation" id="Animation_gntrk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_dewec"]
+resource_name = "Walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3, 0.39999998),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5ixxa"]
+_data = {
+&"Hurt": SubResource("Animation_5ixxa"),
+&"Idle": SubResource("Animation_kyqiw"),
+&"RESET": SubResource("Animation_gntrk"),
+&"Walk": SubResource("Animation_dewec")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0duit"]
+bg_color = Color(0, 0.972549, 0.1764706, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mars6"]
+radius = 7.0
+height = 22.0
+
+[node name="Player" type="CharacterBody2D" unique_id=642790227]
+platform_floor_layers = 4294901760
+script = ExtResource("1_kyqiw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=328971201]
+texture = ExtResource("1_rpqav")
+hframes = 6
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1069614231]
+position = Vector2(-0.5, 9)
+shape = SubResource("RectangleShape2D_0duit")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1785111573]
+zoom = Vector2(3.5, 3.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1810970267]
+libraries/ = SubResource("AnimationLibrary_5ixxa")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1275604883]
+position = Vector2(-0.50000036, 10.999999)
+scale = Vector2(0.68749994, 0.625)
+texture = ExtResource("3_gntrk")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1629341408]
+offset_left = -7.0
+offset_top = -14.0
+offset_right = 7.0
+offset_bottom = -10.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_0duit")
+value = 32.7
+show_percentage = false
+
+[node name="Gun" parent="." unique_id=1046319591 instance=ExtResource("4_dewec")]
+
+[node name="HurtZone" type="Area2D" parent="." unique_id=226585671]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtZone" unique_id=615131586]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_mars6")
