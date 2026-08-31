@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d12pijqgd1l45" path="res://Scenes/BatEnemy.tscn" id="4_jghel"]
 [ext_resource type="Texture2D" uid="uid://c4pbc755p0hll" path="res://Assets/Environments/Your1stDungeonbyLuisSn0w.png" id="5_t3or0"]
 [ext_resource type="Texture2D" uid="uid://bii5h5msku51y" path="res://Assets/Environments/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="6_ysn8j"]
+[ext_resource type="PackedScene" uid="uid://catf3bdg0iots" path="res://Scenes/Door.tscn" id="7_ysn8j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qumfl"]
 texture = ExtResource("2_jghel")
@@ -303,6 +304,7 @@ sources/1 = SubResource("TileSetAtlasSource_kylad")
 
 [node name="Node2D" type="Node2D" unique_id=737476009]
 y_sort_enabled = true
+position = Vector2(-15, -37)
 
 [node name="Player" parent="." unique_id=1774169421 instance=ExtResource("1_joc8x")]
 z_index = 1
@@ -328,3 +330,6 @@ tile_set = SubResource("TileSet_4kuys")
 [node name="CharacterBody2D" parent="." unique_id=1137439844 instance=ExtResource("4_jghel")]
 z_index = 1
 position = Vector2(226, 517)
+
+[node name="Node2D" parent="." unique_id=255549473 instance=ExtResource("7_ysn8j")]
+position = Vector2(738, 430)
