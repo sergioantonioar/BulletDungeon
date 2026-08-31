@@ -304,7 +304,6 @@ sources/1 = SubResource("TileSetAtlasSource_kylad")
 
 [node name="Node2D" type="Node2D" unique_id=737476009]
 y_sort_enabled = true
-position = Vector2(-15, -37)
 
 [node name="Player" parent="." unique_id=1774169421 instance=ExtResource("1_joc8x")]
 z_index = 1
