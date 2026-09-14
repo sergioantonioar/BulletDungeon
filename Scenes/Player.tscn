@@ -3,9 +3,26 @@
 [ext_resource type="Script" uid="uid://coy033gl0t6ni" path="res://Scripts/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://n3fgqjtwpv8w" path="res://Assets/characters/c1.png" id="1_rpqav"]
 [ext_resource type="Texture2D" uid="uid://lckcdwqguy3e" path="res://Assets/shadows/ss2.png" id="3_gntrk"]
+[ext_resource type="PackedScene" uid="uid://nejjr7y50qa4" path="res://Scenes/Gun.tscn" id="4_dewec"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lh34q"]
 size = Vector2(9, 5)
+
+[sub_resource type="Animation" id="Animation_5ixxa"]
+resource_name = "Hurt"
+length = 0.19999999999999998
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [6, 7]
+}
 
 [sub_resource type="Animation" id="Animation_kyqiw"]
 resource_name = "Idle"
@@ -58,10 +75,15 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5ixxa"]
 _data = {
+&"Hurt": SubResource("Animation_5ixxa"),
 &"Idle": SubResource("Animation_kyqiw"),
 &"RESET": SubResource("Animation_gntrk"),
 &"Walk": SubResource("Animation_dewec")
 }
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ixxa"]
+radius = 7.0
+height = 22.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1774169421 groups=["Player"]]
 platform_floor_layers = 0
@@ -85,3 +107,12 @@ libraries/ = SubResource("AnimationLibrary_5ixxa")
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1611075472]
 position = Vector2(0, 10)
 texture = ExtResource("3_gntrk")
+
+[node name="Gun" parent="." unique_id=1353341204 instance=ExtResource("4_dewec")]
+position = Vector2(-2, 0)
+
+[node name="HurtZone" type="Area2D" parent="." unique_id=760093324]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtZone" unique_id=670301524]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_5ixxa")

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d12pijqgd1l45"]
+[gd_scene format=3 uid="uid://dk3qaqoh2prt1"]
 
 [ext_resource type="Script" uid="uid://bepsm2y3nd20c" path="res://Scripts/bat_enemy.gd" id="1_ew0y8"]
 [ext_resource type="Texture2D" uid="uid://c8qfgrtwpdls8" path="res://Assets/enemies/e1.png" id="1_wh78i"]
@@ -6,6 +6,22 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lh34q"]
 radius = 9.0
+
+[sub_resource type="Animation" id="Animation_l1gpn"]
+resource_name = "Hurt"
+length = 0.19999999999999998
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 3]
+}
 
 [sub_resource type="Animation" id="Animation_ew0y8"]
 length = 0.001
@@ -24,7 +40,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_40kae"]
 resource_name = "Walk"
-length = 0.39999999999999997
+length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -41,11 +57,12 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l1gpn"]
 _data = {
+&"Hurt": SubResource("Animation_l1gpn"),
 &"RESET": SubResource("Animation_ew0y8"),
 &"Walk": SubResource("Animation_40kae")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1137439844]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1137439844 groups=["Enemies"]]
 platform_floor_layers = 0
 script = ExtResource("1_ew0y8")
 
