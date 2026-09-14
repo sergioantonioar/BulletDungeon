@@ -81,16 +81,16 @@ _data = {
 &"Walk": SubResource("Animation_dewec")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ixxa"]
-radius = 7.0
-height = 22.0
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixpol"]
 bg_color = Color(0.5035068, 0.65114474, 0.43050796, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ixxa"]
+radius = 7.0
+height = 22.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1774169421 groups=["Player"]]
 platform_floor_layers = 0
@@ -101,7 +101,7 @@ texture = ExtResource("1_rpqav")
 hframes = 6
 vframes = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=771207872]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=771207872 groups=["Player"]]
 position = Vector2(-0.5, 7.5)
 shape = SubResource("RectangleShape2D_lh34q")
 
@@ -115,15 +115,6 @@ libraries/ = SubResource("AnimationLibrary_5ixxa")
 position = Vector2(0, 10)
 texture = ExtResource("3_gntrk")
 
-[node name="Gun" parent="." unique_id=1353341204 instance=ExtResource("4_dewec")]
-position = Vector2(-2, 0)
-
-[node name="HurtZone" type="Area2D" parent="." unique_id=760093324]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtZone" unique_id=670301524]
-position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_5ixxa")
-
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=694727281]
 offset_left = -14.0
 offset_top = -17.0
@@ -132,3 +123,12 @@ offset_bottom = -11.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_ixpol")
 value = 15.0
 show_percentage = false
+
+[node name="Gun" parent="." unique_id=1353341204 instance=ExtResource("4_dewec")]
+position = Vector2(-2, 0)
+
+[node name="HurtZone" type="Area2D" parent="." unique_id=760093324 groups=["Player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtZone" unique_id=670301524 groups=["Player"]]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_5ixxa")
