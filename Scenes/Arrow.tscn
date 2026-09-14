@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://8ku2v5q1ehxn"]
+
+[ext_resource type="Script" uid="uid://dsfer0a0bevrj" path="res://Scripts/Bullet.gd" id="1_2nt64"]
+[ext_resource type="PackedScene" uid="uid://cufoncym2pyvp" path="res://Scenes/ExplosionArrow.tscn" id="2_2nt64"]
+[ext_resource type="Texture2D" uid="uid://dumoc6kcr0hp" path="res://Assets/weapons/bow_p.png" id="3_2nt64"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vtqy"]
+size = Vector2(15, 6)
+
+[node name="Arrow" type="Area2D" unique_id=258976042]
+script = ExtResource("1_2nt64")
+explosion_scene = ExtResource("2_2nt64")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=74175827]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_0vtqy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=166278538]
+texture = ExtResource("3_2nt64")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

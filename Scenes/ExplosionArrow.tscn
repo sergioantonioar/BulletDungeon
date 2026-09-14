@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cufoncym2pyvp"]
+
+[ext_resource type="Texture2D" uid="uid://boqdcax7eqiji" path="res://Assets/weapons/bow_e.png" id="1_qur44"]
+[ext_resource type="Script" uid="uid://xqbtkl1l85pa" path="res://Scripts/explosion_bullet.gd" id="2_yoma6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yoma6"]
+atlas = ExtResource("1_qur44")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uswwy"]
+atlas = ExtResource("1_qur44")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf2rd"]
+atlas = ExtResource("1_qur44")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p148l"]
+atlas = ExtResource("1_qur44")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_17w7k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoma6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uswwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf2rd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p148l")
+}],
+"loop": 0,
+"name": &"Explosion",
+"speed": 15.0
+}]
+
+[node name="Explosion" type="AnimatedSprite2D" unique_id=134605355]
+sprite_frames = SubResource("SpriteFrames_17w7k")
+animation = &"Explosion"
+autoplay = "Explosion"
+frame = 3
+frame_progress = 1.0
+script = ExtResource("2_yoma6")

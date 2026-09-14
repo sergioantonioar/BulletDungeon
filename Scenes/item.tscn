@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://124qd3cb1vjr"]
+
+[ext_resource type="Script" uid="uid://b0rc4mwfvq2v5" path="res://Scripts/item.gd" id="1_dg53c"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ys0gr"]
+load_path = "res://.godot/imported/bow.png-4c825ac41715a58e041e9ac71c9fd75e.ctex"
+
+[sub_resource type="Animation" id="Animation_hc256"]
+resource_name = "Fly"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20052911, 0.40057388, 0.601103, 0.7987259),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1), Vector2(0, 0), Vector2(0, 1), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8otfu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s6kx2"]
+resource_name = "spawn"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.10026456, 0.19810727),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.25, 1.25), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m2u34"]
+_data = {
+&"Fly": SubResource("Animation_hc256"),
+&"RESET": SubResource("Animation_8otfu"),
+&"spawn": SubResource("Animation_s6kx2")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0duit"]
+radius = 8.0
+
+[sub_resource type="Gradient" id="Gradient_76mu4"]
+offsets = PackedFloat32Array(0.059322033, 0.5614407, 0.90254235, 0.90677965)
+colors = PackedColorArray(0.30588236, 1, 0.7294118, 1, 1, 1, 1, 1, 18.892157, 18.892157, 18.892157, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_u06aw"]
+gradient = SubResource("Gradient_76mu4")
+
+[sub_resource type="Curve" id="Curve_btogu"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0.008032128, 0.56603765), 0.0, 0.25168315, 0, 0, Vector2(0.034136545, 0.61165047), 0.0, 0.0, 0, 0, Vector2(0.054216865, 0.8009708), 0.0, 0.0, 0, 0, Vector2(0.07831325, 1.0048542), 0.0, 0.0, 0, 0, Vector2(0.1064257, 1.2087379), 0.0, 0.0, 0, 0, Vector2(0.13052209, 1.4126213), 0.0, 0.0, 0, 0, Vector2(0.14457831, 1.6601942), 0.0, 0.0, 0, 0, Vector2(0.15461847, 2.0097086), 0.0, 0.0, 0, 0]
+point_count = 8
+
+[sub_resource type="CurveTexture" id="CurveTexture_6jj8j"]
+curve = SubResource("Curve_btogu")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rpty4"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 7.36
+spread = 96.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 223.99998
+gravity = Vector3(0, -60, 0)
+scale_over_velocity_min = 140.0
+scale_over_velocity_max = 250.0
+scale_over_velocity_curve = SubResource("CurveTexture_6jj8j")
+color = Color(0.4745098, 0.9843137, 0.8156863, 1)
+color_ramp = SubResource("GradientTexture1D_u06aw")
+turbulence_enabled = true
+turbulence_noise_strength = 0.0
+turbulence_noise_scale = 7.325
+
+[node name="Item" type="Area2D" unique_id=1704319633]
+script = ExtResource("1_dg53c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1523991939]
+scale = Vector2(1e-05, 1e-05)
+texture = SubResource("CompressedTexture2D_ys0gr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=707363242]
+root_node = NodePath("../CollisionShape2D")
+libraries/ = SubResource("AnimationLibrary_m2u34")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=364898559]
+shape = SubResource("CircleShape2D_0duit")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=572781022]
+position = Vector2(0, 2)
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_rpty4")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
