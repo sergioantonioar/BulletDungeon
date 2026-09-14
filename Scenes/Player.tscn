@@ -10,7 +10,7 @@ size = Vector2(9, 5)
 
 [sub_resource type="Animation" id="Animation_5ixxa"]
 resource_name = "Hurt"
-length = 0.19999999999999998
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -85,6 +85,13 @@ _data = {
 radius = 7.0
 height = 22.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixpol"]
+bg_color = Color(0.5035068, 0.65114474, 0.43050796, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1774169421 groups=["Player"]]
 platform_floor_layers = 0
 script = ExtResource("1_kyqiw")
@@ -116,3 +123,12 @@ position = Vector2(-2, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtZone" unique_id=670301524]
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_5ixxa")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=694727281]
+offset_left = -14.0
+offset_top = -17.0
+offset_right = 14.0
+offset_bottom = -11.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_ixpol")
+value = 15.0
+show_percentage = false
