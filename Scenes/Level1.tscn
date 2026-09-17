@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://tsiusqqniqgm" path="res://Scenes/Door.tscn" id="7_ysn8j"]
 [ext_resource type="PackedScene" uid="uid://d4ds823tlu63k" path="res://Scenes/SkeletonEnemy.tscn" id="8_6ll4n"]
 [ext_resource type="Script" uid="uid://jty7wtobpij6" path="res://Scripts/spawner.gd" id="9_kylad"]
+[ext_resource type="PackedScene" uid="uid://d1jkjmy8xx8fm" path="res://Scenes/chest.tscn" id="10_bdlbp"]
+[ext_resource type="PackedScene" uid="uid://c3eqyx0stv51j" path="res://Scenes/ItemBow.tscn" id="11_2h8qs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qumfl"]
 texture = ExtResource("2_jghel")
@@ -337,30 +339,27 @@ position = Vector2(738, 430)
 
 [node name="CharacterBody2D2" parent="." unique_id=1588269816 instance=ExtResource("8_6ll4n")]
 z_index = 1
-position = Vector2(639, 579)
+position = Vector2(853, 635)
 
 [node name="Spawner" type="Area2D" parent="." unique_id=1009987210]
-z_index = 1
 y_sort_enabled = true
 script = ExtResource("9_kylad")
 enemy_scenes = Array[PackedScene]([ExtResource("4_jghel")])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spawner" unique_id=335429950]
 position = Vector2(-6, -1)
-polygon = PackedVector2Array(148, 489, 142, 588, 227, 580, 253, 581, 254, 613, 161, 617, 186, 639, 438, 640, 440, 591, 358, 585, 356, 546, 467, 549, 472, 487)
+polygon = PackedVector2Array(148, 489, 142, 588, 227, 580, 253, 581, 254, 613, 161, 617, 186, 639, 423, 631, 440, 591, 358, 585, 356, 546, 467, 549, 472, 487)
 
 [node name="Spawner2" type="Area2D" parent="." unique_id=286485328]
-z_index = 1
 y_sort_enabled = true
 script = ExtResource("9_kylad")
 enemy_scenes = Array[PackedScene]([ExtResource("4_jghel")])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spawner2" unique_id=151779103]
 position = Vector2(-12, -4)
-polygon = PackedVector2Array(198, 161, 189, 194, 240, 193, 239, 239, 208, 242, 214, 211, 180, 253, 182, 288, 503, 288, 498, 215, 380, 219, 375, 184, 486, 186, 484, 155)
+polygon = PackedVector2Array(198, 161, 189, 194, 240, 193, 239, 239, 208, 242, 214, 211, 180, 253, 182, 288, 420, 273, 497, 284, 498, 215, 393, 218, 396, 182, 486, 186, 484, 155, 442, 171)
 
 [node name="Spawner3" type="Area2D" parent="." unique_id=654424004]
-z_index = 1
 y_sort_enabled = true
 script = ExtResource("9_kylad")
 enemy_scenes = Array[PackedScene]([ExtResource("4_jghel")])
@@ -370,11 +369,14 @@ position = Vector2(-14, 1)
 polygon = PackedVector2Array(615, 155, 617, 196, 640, 200, 636, 247, 660, 255, 666, 294, 624, 305, 671, 312, 803, 315, 808, 304, 868, 301, 870, 260, 869, 207, 825, 203, 814, 177, 868, 155)
 
 [node name="Spawner4" type="Area2D" parent="." unique_id=1680530257]
-z_index = 1
 y_sort_enabled = true
 script = ExtResource("9_kylad")
 enemy_scenes = Array[PackedScene]([ExtResource("8_6ll4n")])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spawner4" unique_id=747930930]
-position = Vector2(-14, 1)
-polygon = PackedVector2Array(619, 460, 621, 501, 669, 499, 669, 544, 611, 572, 620, 603, 627, 633, 679, 643, 822, 647, 812, 609, 872, 606, 874, 565, 873, 512, 829, 508, 818, 482, 872, 460)
+position = Vector2(-14, -1)
+polygon = PackedVector2Array(619, 460, 621, 501, 657, 500, 662, 528, 611, 572, 620, 603, 627, 633, 679, 643, 822, 647, 835, 571, 872, 606, 874, 565, 873, 512, 829, 508, 818, 482, 872, 460)
+
+[node name="Chest" parent="." unique_id=866996402 instance=ExtResource("10_bdlbp")]
+position = Vector2(737, 612)
+item_scene = ExtResource("11_2h8qs")

@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://nejjr7y50qa4"]
+[gd_scene format=3 uid="uid://phdb2n8adcgg"]
 
-[ext_resource type="Texture2D" uid="uid://bhlm701vtbfqs" path="res://Assets/weapons/gun.png" id="1_jpqjm"]
-[ext_resource type="Script" uid="uid://dewqo268afb2" path="res://Scripts/gun.gd" id="1_u7kx4"]
-[ext_resource type="PackedScene" uid="uid://duiy7rnt7u8aq" path="res://Scenes/Bullet.tscn" id="2_cgpo0"]
+[ext_resource type="Script" uid="uid://dewqo268afb2" path="res://Scripts/gun.gd" id="1_6qgiv"]
+[ext_resource type="PackedScene" uid="uid://clcjrrv3vs7ca" path="res://Scenes/Arrow.tscn" id="2_6qgiv"]
+[ext_resource type="Texture2D" uid="uid://sdab4u4s8au2" path="res://Assets/weapons/bow.png" id="3_6qgiv"]
 
 [sub_resource type="Animation" id="Animation_u7kx4"]
 length = 0.001
@@ -41,15 +41,15 @@ _data = {
 &"Shoot": SubResource("Animation_cgpo0")
 }
 
-[node name="Gun" type="Node2D" unique_id=1353341204]
-script = ExtResource("1_u7kx4")
-projectile_scene = ExtResource("2_cgpo0")
+[node name="Bow" type="Node2D" unique_id=1353341204]
+script = ExtResource("1_6qgiv")
+projectile_scene = ExtResource("2_6qgiv")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=136196519]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=256555991]
 position = Vector2(16, 0)
-texture = ExtResource("1_jpqjm")
+texture = ExtResource("3_6qgiv")
 
 [node name="ShootPoint" type="Marker2D" parent="Sprite2D" unique_id=368174882]
 position = Vector2(6, 0)

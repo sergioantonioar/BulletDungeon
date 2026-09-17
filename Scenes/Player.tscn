@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://n3fgqjtwpv8w" path="res://Assets/characters/c1.png" id="1_rpqav"]
 [ext_resource type="Texture2D" uid="uid://lckcdwqguy3e" path="res://Assets/shadows/ss2.png" id="3_gntrk"]
 [ext_resource type="PackedScene" uid="uid://nejjr7y50qa4" path="res://Scenes/Gun.tscn" id="4_dewec"]
+[ext_resource type="Script" uid="uid://c2yp0q7to8s36" path="res://Scripts/weapon_manager.gd" id="4_nn08x"]
+[ext_resource type="PackedScene" uid="uid://phdb2n8adcgg" path="res://Scenes/Bow.tscn" id="5_5ixxa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lh34q"]
 size = Vector2(9, 5)
@@ -124,11 +126,15 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ixpol")
 value = 15.0
 show_percentage = false
 
-[node name="Gun" parent="." unique_id=1353341204 instance=ExtResource("4_dewec")]
-position = Vector2(-2, 0)
-
 [node name="HurtZone" type="Area2D" parent="." unique_id=760093324 groups=["Player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtZone" unique_id=670301524 groups=["Player"]]
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_5ixxa")
+
+[node name="WeaponManager" type="Node2D" parent="." unique_id=1668191470]
+script = ExtResource("4_nn08x")
+
+[node name="Gun" parent="WeaponManager" unique_id=1353341204 instance=ExtResource("4_dewec")]
+
+[node name="Bow" parent="WeaponManager" unique_id=994966831 instance=ExtResource("5_5ixxa")]
