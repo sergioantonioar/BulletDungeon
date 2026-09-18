@@ -6,11 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://d12pijqgd1l45" path="res://Scenes/BatEnemy.tscn" id="4_jghel"]
 [ext_resource type="Texture2D" uid="uid://c4pbc755p0hll" path="res://Assets/Environments/Your1stDungeonbyLuisSn0w.png" id="5_t3or0"]
 [ext_resource type="Texture2D" uid="uid://bii5h5msku51y" path="res://Assets/Environments/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="6_ysn8j"]
-[ext_resource type="PackedScene" uid="uid://tsiusqqniqgm" path="res://Scenes/Door.tscn" id="7_ysn8j"]
+[ext_resource type="PackedScene" uid="uid://catf3bdg0iots" path="res://Scenes/Door.tscn" id="7_ysn8j"]
 [ext_resource type="PackedScene" uid="uid://d4ds823tlu63k" path="res://Scenes/SkeletonEnemy.tscn" id="8_6ll4n"]
 [ext_resource type="Script" uid="uid://jty7wtobpij6" path="res://Scripts/spawner.gd" id="9_kylad"]
 [ext_resource type="PackedScene" uid="uid://d1jkjmy8xx8fm" path="res://Scenes/chest.tscn" id="10_bdlbp"]
-[ext_resource type="PackedScene" uid="uid://c3eqyx0stv51j" path="res://Scenes/ItemBow.tscn" id="11_2h8qs"]
+[ext_resource type="PackedScene" uid="uid://iaelkwtxkgwu" path="res://Scenes/score.tscn" id="11_2h8qs"]
+[ext_resource type="PackedScene" uid="uid://cab2jxlooeeqx" path="res://Scenes/ui_weapon.tscn" id="12_rpty4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qumfl"]
 texture = ExtResource("2_jghel")
@@ -379,4 +380,7 @@ polygon = PackedVector2Array(619, 460, 621, 501, 657, 500, 662, 528, 611, 572, 6
 
 [node name="Chest" parent="." unique_id=866996402 instance=ExtResource("10_bdlbp")]
 position = Vector2(737, 612)
-item_scene = ExtResource("11_2h8qs")
+
+[node name="Score" parent="." unique_id=1148567081 instance=ExtResource("11_2h8qs")]
+
+[node name="CanvasLayer" parent="." unique_id=1532023526 instance=ExtResource("12_rpty4")]

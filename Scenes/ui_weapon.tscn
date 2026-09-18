@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cab2jxlooeeqx"]
+
+[ext_resource type="Script" uid="uid://b7kymt4fw7odv" path="res://Scripts/ui_weapon.gd" id="1_063aa"]
+[ext_resource type="Texture2D" uid="uid://bhlm701vtbfqs" path="res://Assets/weapons/gun.png" id="2_q7yue"]
+[ext_resource type="Script" uid="uid://dga5ca24mbca4" path="res://texture_rect.gd" id="3_qxodl"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1532023526]
+script = ExtResource("1_063aa")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=374742642]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -232.0
+offset_top = -230.0
+offset_right = -72.0
+offset_bottom = -70.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_q7yue")
+script = ExtResource("3_qxodl")

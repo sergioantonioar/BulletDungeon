@@ -10,6 +10,8 @@ var health = 3
 var shoot_interval = 1.5
 var bullet_scene = preload("res://Scenes/enemy_bullet.tscn")
 
+@onready var score = get_tree().current_scene.get_node("Score")
+
 func _ready():
 	anim.play("Walk")
 	anim.connect("animation_finished", self._on_animation_finished)
@@ -30,7 +32,9 @@ func take_damage():
 	anim.stop()
 	anim.play("Hurt")
 	health-=1
-	if(health<=0):
+	if health <= 0:
+		if score.has_method("_add_one"):
+			score._add_one()
 		queue_free()
 
 func _on_animation_finished(anim_name):
