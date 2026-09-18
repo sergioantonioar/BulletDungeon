@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nejjr7y50qa4" path="res://Scenes/Gun.tscn" id="4_dewec"]
 [ext_resource type="Script" uid="uid://c2yp0q7to8s36" path="res://Scripts/weapon_manager.gd" id="4_nn08x"]
 [ext_resource type="PackedScene" uid="uid://phdb2n8adcgg" path="res://Scenes/Bow.tscn" id="5_5ixxa"]
+[ext_resource type="PackedScene" uid="uid://cab2jxlooeeqx" path="res://Scenes/ui_weapon.tscn" id="7_52ee3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lh34q"]
 size = Vector2(9, 5)
@@ -138,3 +139,5 @@ script = ExtResource("4_nn08x")
 [node name="Gun" parent="WeaponManager" unique_id=1353341204 instance=ExtResource("4_dewec")]
 
 [node name="Bow" parent="WeaponManager" unique_id=994966831 instance=ExtResource("5_5ixxa")]
+
+[node name="CanvasLayer" parent="WeaponManager" unique_id=1532023526 instance=ExtResource("7_52ee3")]
