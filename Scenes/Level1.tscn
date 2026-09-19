@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://d4ds823tlu63k" path="res://Scenes/SkeletonEnemy.tscn" id="8_6ll4n"]
 [ext_resource type="Script" uid="uid://jty7wtobpij6" path="res://Scripts/spawner.gd" id="9_kylad"]
 [ext_resource type="PackedScene" uid="uid://d1jkjmy8xx8fm" path="res://Scenes/chest.tscn" id="10_bdlbp"]
-[ext_resource type="PackedScene" uid="uid://c3eqyx0stv51j" path="res://Scenes/ItemBow.tscn" id="11_2h8qs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qumfl"]
 texture = ExtResource("2_jghel")
@@ -379,4 +378,3 @@ polygon = PackedVector2Array(619, 460, 621, 501, 657, 500, 662, 528, 611, 572, 6
 
 [node name="Chest" parent="." unique_id=866996402 instance=ExtResource("10_bdlbp")]
 position = Vector2(737, 612)
-item_scene = ExtResource("11_2h8qs")
