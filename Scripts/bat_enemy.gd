@@ -34,6 +34,7 @@ func take_damage():
 	health-=1
 	if health <= 0:
 		if score.has_method("_add_one"):
+			print("Enemigo muerto")
 			score._add_one()
 		queue_free()
 

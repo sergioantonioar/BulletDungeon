@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dk3qaqoh2prt1" path="res://Scenes/BatEnemy.tscn" id="4_jghel"]
 [ext_resource type="Texture2D" uid="uid://c4pbc755p0hll" path="res://Assets/Environments/Your1stDungeonbyLuisSn0w.png" id="5_t3or0"]
 [ext_resource type="Texture2D" uid="uid://bii5h5msku51y" path="res://Assets/Environments/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="6_ysn8j"]
-[ext_resource type="PackedScene" uid="uid://catf3bdg0iots" path="res://Scenes/Door.tscn" id="7_ysn8j"]
-[ext_resource type="PackedScene" uid="uid://d4ds823tlu63k" path="res://Scenes/SkeletonEnemy.tscn" id="8_6ll4n"]
+[ext_resource type="PackedScene" uid="uid://tsiusqqniqgm" path="res://Scenes/Door.tscn" id="7_ysn8j"]
+[ext_resource type="PackedScene" uid="uid://bj0rct6vmxhxb" path="res://Scenes/SkeletonEnemy.tscn" id="8_6ll4n"]
 [ext_resource type="Script" uid="uid://jty7wtobpij6" path="res://Scripts/spawner.gd" id="9_kylad"]
-[ext_resource type="PackedScene" uid="uid://d1jkjmy8xx8fm" path="res://Scenes/chest.tscn" id="10_bdlbp"]
+[ext_resource type="PackedScene" uid="uid://43mwcey00xix" path="res://Scenes/chest.tscn" id="10_bdlbp"]
 [ext_resource type="PackedScene" uid="uid://iaelkwtxkgwu" path="res://Scenes/score.tscn" id="11_2h8qs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qumfl"]
