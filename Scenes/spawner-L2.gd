@@ -2,8 +2,8 @@ extends Area2D
 signal spawner_cleared
 
 @export var enemy_scenes: Array[PackedScene] = []
-@export var spawn_interval: float = 0.7
-@export var max_total_spawned: int = 5
+@export var spawn_interval: float = 0.5
+@export var max_total_spawned: int = 40
 
 var total_spawned := 0
 var player_inside := false
