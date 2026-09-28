@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="BulletDungeon"
+run/main_scene="uid://by0ep2mr7tqb4"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*uid://ckwktof08bbc6"
 
 [display]
 

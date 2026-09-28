@@ -37,7 +37,7 @@ func _on_animation_finished():
 			load_next_level()
 			
 func open_wall() -> void:
-	if tilemap:
+	if tilemap:	
 		for cell in wall_cells:
 			tilemap.erase_cell(cell)
 			
