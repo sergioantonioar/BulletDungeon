@@ -307,9 +307,11 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6ll4n")
 sources/1 = SubResource("TileSetAtlasSource_kylad")
 
-[node name="Level1" type="Node2D" unique_id=737476009]
+[node name="Level1" type="Node2D" unique_id=737476009 node_paths=PackedStringArray("chest_room_spawner", "exit_door")]
 y_sort_enabled = true
 script = ExtResource("1_rpty4")
+chest_room_spawner = NodePath("Spawner4")
+exit_door = NodePath("Door2")
 
 [node name="Player" parent="." unique_id=1774169421 instance=ExtResource("1_joc8x")]
 position = Vector2(309, 528)

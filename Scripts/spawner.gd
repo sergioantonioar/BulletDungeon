@@ -1,4 +1,5 @@
 extends Area2D
+
 signal spawner_cleared
 
 @export var enemy_scenes: Array[PackedScene] = []
@@ -9,6 +10,7 @@ var total_spawned := 0
 var player_inside := false
 var enemies_alive := 0
 var cleared := false
+var spawning := false
 
 var polygon: PackedVector2Array
 var triangles: PackedInt32Array
@@ -25,7 +27,9 @@ func _ready():
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
 		player_inside = true
-		spawn_loop()
+
+		if not spawning and not cleared:
+			spawn_loop()
 
 
 func _on_body_exited(body):
@@ -34,57 +38,74 @@ func _on_body_exited(body):
 
 
 func spawn_loop():
+	spawning = true
+
 	while player_inside and total_spawned < max_total_spawned:
-		
+
 		await get_tree().create_timer(spawn_interval).timeout
-		
+
 		if not player_inside:
+			spawning = false
 			return
-		
+
 		if total_spawned < max_total_spawned:
 			spawn_enemy()
-			total_spawned += 1
+
+	spawning = false
 
 
 func spawn_enemy():
 	if enemy_scenes.is_empty():
 		return
-	
+
 	var enemy_scene = enemy_scenes[randi() % enemy_scenes.size()]
 	var enemy = enemy_scene.instantiate()
-	
+
 	enemy.position = get_random_point_in_polygon()
 	enemy.add_to_group("Enemies")
-	enemy.connect("enemy_died", Callable(self, "_on_enemy_died"))
+
+	enemy.enemy_died.connect(_on_enemy_died)
+
 	get_parent().add_child(enemy)
+
 	enemies_alive += 1
+	total_spawned += 1
+
 
 func _on_enemy_died():
 	enemies_alive -= 1
 	check_cleared()
 
+
 func check_cleared():
 	if cleared:
 		return
+
 	if enemies_alive <= 0 and total_spawned >= max_total_spawned:
 		cleared = true
+		print("Spawner completado: ", name)
 		spawner_cleared.emit()
+
 
 func get_random_point_in_polygon() -> Vector2:
 	@warning_ignore("integer_division")
 	var tri_index = (randi() % (triangles.size() / 3)) * 3
-	
+
 	var i1 = triangles[tri_index]
 	var i2 = triangles[tri_index + 1]
 	var i3 = triangles[tri_index + 2]
-	
+
 	var p1 = polygon[i1]
 	var p2 = polygon[i2]
 	var p3 = polygon[i3]
-	
+
 	var r1 = sqrt(randf())
 	var r2 = randf()
-	
-	var point = (1 - r1) * p1 + (r1 * (1 - r2)) * p2 + (r1 * r2) * p3
-	
+
+	var point = (
+		(1 - r1) * p1
+		+ (r1 * (1 - r2)) * p2
+		+ (r1 * r2) * p3
+	)
+
 	return $CollisionPolygon2D.to_global(point)
