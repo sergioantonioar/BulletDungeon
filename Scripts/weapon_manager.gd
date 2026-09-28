@@ -10,11 +10,19 @@ var current_weapon_index = 0
 func _ready():
 	weapons = [$Gun, $Bow]
 
-	var starting_weapon = weapons[0]
-	owned_weapons.append(starting_weapon)
+	# Restaurar armas obtenidas previamente desde GameState
+	owned_weapons.clear()
+	for weapon in weapons:
+		if weapon.name in GameState.owned_weapon_names:
+			owned_weapons.append(weapon)
+
+	if owned_weapons.is_empty():
+		owned_weapons.append(weapons[0])
+
+	current_weapon_index = clamp(GameState.current_weapon_index, 0, owned_weapons.size() - 1)
 
 	for weapon in weapons:
-		set_weapon_enabled(weapon, weapon == starting_weapon)
+		set_weapon_enabled(weapon, weapon == owned_weapons[current_weapon_index])
 
 	update_weapon_ui()
 
@@ -49,6 +57,8 @@ func equip_weapon(delta):
 		true
 	)
 
+	GameState.current_weapon_index = current_weapon_index
+
 	update_weapon_ui()
 
 
@@ -58,6 +68,8 @@ func pickup_weapon_by_name(_weapon_name):
 			if weapon not in owned_weapons:
 				owned_weapons.append(weapon)
 				set_weapon_enabled(weapon, false)
+				if not GameState.owned_weapon_names.has(weapon.name):
+					GameState.owned_weapon_names.append(weapon.name)
 			return
 
 
