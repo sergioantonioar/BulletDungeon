@@ -11,57 +11,82 @@
 [ext_resource type="Texture2D" uid="uid://c4pbc755p0hll" path="res://Assets/Environments/Your1stDungeonbyLuisSn0w.png" id="9_bdlbp"]
 [ext_resource type="Texture2D" uid="uid://bii5h5msku51y" path="res://Assets/Environments/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="10_2h8qs"]
 [ext_resource type="PackedScene" uid="uid://iaelkwtxkgwu" path="res://Scenes/score.tscn" id="11_au75x"]
+[ext_resource type="Texture2D" uid="uid://cqpn8e2jsodq1" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="12_62f1r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_00287"]
 texture = ExtResource("2_jghel")
 0:0/0 = 0
 1:0/0 = 0
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1je60"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5t7yc"]
 texture = ExtResource("3_slnnj")
 1:0/0 = 0
+1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
+2:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
+3:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
+2:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
+3:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0 = 0
+4:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/0 = 0
+0:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
+1:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
+2:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
+3:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:2/0 = 0
+4:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:3/0 = 0
+0:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:3/0 = 0
+1:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:3/0 = 0
+2:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:3/0 = 0
+3:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:3/0 = 0
+4:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:4/0 = 0
 0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:4/0 = 0
+1:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:4/0 = 0
+2:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:4/0 = 0
+3:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1je60")
 3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:4/0 = 0
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -73,9 +98,13 @@ texture = ExtResource("3_slnnj")
 3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_0duit"]
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_00287")
 sources/1 = SubResource("TileSetAtlasSource_5t7yc")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ycmr1"]
+polygon = PackedVector2Array(-6.2945843, -2.233562, -4.6701756, -3.4518685, 4.6701756, -3.756445, 6.2945833, -2.233562, 5.9900074, -1.3198318, 4.2640734, -3.1472921, -3.8579707, -3.0457664)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rpty4"]
 texture = ExtResource("9_bdlbp")
@@ -125,6 +154,7 @@ texture = ExtResource("9_bdlbp")
 2:7/0 = 0
 3:7/0 = 0
 4:7/0 = 0
+4:7/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ycmr1")
 5:7/0 = 0
 6:7/0 = 0
 6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.856186, -8, 8, 8, 8, 8, 5.036045)
@@ -300,6 +330,7 @@ texture = ExtResource("10_2h8qs")
 9:9/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_0vtqy"]
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rpty4")
 sources/2 = SubResource("TileSetAtlasSource_6jj8j")
@@ -348,7 +379,83 @@ position = Vector2(753, 398)
 
 [node name="TileMapLayerObject" type="TileMapLayer" parent="." unique_id=472321248 groups=["Objects"]]
 y_sort_enabled = true
+position = Vector2(-13, 6)
 tile_map_data = PackedByteArray("AAAyABEAAgAHAAcAAAAyABUAAgAHAAcAAAAlAAoAAgAHAAcAAAAdAB8AAgAHAAcAAAASAB8AAgAHAAcAAAAVABoAAgAHAAcAAAARABAAAgAHAAcAAAAUAAsAAgAHAAcAAAARAAcAAgAHAAcAAAAvAA8AAgAIAAYAAAAvABAAAgAIAAYAAAAwABEAAgAIAAYAAAAwABIAAgAIAAYAAAAxABIAAgAIAAYAAAAxABMAAgAIAAYAAAAaAAcAAgAIAAYAAAAYABoAAgAIAAYAAAAYABsAAgAIAAYAAAAYABwAAgAIAAYAAAARABgAAgAIAAYAAAARABcAAgAIAAYAAAARABYAAgAIAAYAAAASABYAAgAIAAYAAAASABUAAgAIAAYAAAASABQAAgAIAAYAAAAeAAsAAgAIAAYAAAAfAAsAAgAIAAYAAAAgAAsAAgAIAAYAAAAhAAsAAgAIAAYAAAAiAAsAAgAIAAYAAAAjAAoAAgAIAAYAAAAkAAoAAgAIAAYAAAAoABkAAgAIAAYAAAAnABkAAgAIAAYAAAAmABkAAgAIAAYAAAAlABkAAgAIAAYAAAAkABkAAgAIAAYAAAATAAsAAgAIAAYAAABCAAkAAgAIAAYAAABDAAkAAgAIAAYAAABEAAkAAgAIAAYAAABFAAkAAgAIAAYAAABGAAkAAgAIAAYAAABHAAkAAgAIAAYAAABHAAoAAgAIAAYAAABIAAoAAgAIAAYAAABIAAsAAgAIAAYAAABJAAsAAgAIAAYAAAAqAAkAAgAEAAcAAABMAAgAAgAEAAcAAAATAAQAAgAAAAkAAAAuAAkAAgAAAAkAAABWAAgAAgAAAAkAAABKAAgAAgAAAAkAAABCAAsAAgABAAkAAAAQAAsAAgABAAkAAAAQABsAAgABAAkAAABCABUAAgABAAkAAAA2AA4AAAAHAAoAAAAzAA4AAAAHAAoAAAA/ABEAAAAHAAkAAAAgAAUAAAADAAsAAAAfAAUAAAADAAsAAAAhAAUAAAAEAAwAAAAxABoAAAAHAAwAAAAwABoAAAAGAAwAAAAjABoAAAAEAAsAAAAQAAUAAAACAAoAAAAxAAoAAAACAAsAAABCABYAAAAHAAsAAAAnABgAAAAEAAgAAAAnABcAAAAEAAcAAAAoABgAAAAGAAcAAAApABgAAAAGAAcAAAAqABgAAAAGAAcAAAArABgAAAAGAAcAAAAsABgAAAAGAAcAAAAtABgAAAAGAAcAAAAuABgAAAAGAAcAAAAvABgAAAAGAAcAAAAwABgAAAAGAAcAAAAxABgAAAAGAAcAAAAWAB0AAAAGAAgAAAAcAB0AAAAGAAgAAAAhAA8AAAAGAAgAAAAYAA4AAAAGAAgAAAAbAAkAAAAGAAgAAABGAA8AAAAFAAgAAABGAA4AAAAFAAcAAAAoAAoAAAADAAkAAAA3AA8AAAAEAAoAAABDABYAAAAEAAoAAABEABYAAAAGAAsAAAA=")
 tile_set = SubResource("TileSet_0vtqy")
 
 [node name="Score" parent="." unique_id=1148567081 instance=ExtResource("11_au75x")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1549512385]
+color = Color(0.76240367, 0.76240367, 0.7624038, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1905063260]
+position = Vector2(245, 447)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("12_62f1r")
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1951849577]
+position = Vector2(299, 80)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("12_62f1r")
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=812803547]
+position = Vector2(731, 158)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("12_62f1r")
+
+[node name="PointLight2D4" type="PointLight2D" parent="." unique_id=20249676]
+position = Vector2(619, 392.00003)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("12_62f1r")
+
+[node name="PointLight2D5" type="PointLight2D" parent="." unique_id=1141251459]
+position = Vector2(1045, 190.00003)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("12_62f1r")
+
+[node name="PointLight2D6" type="PointLight2D" parent="." unique_id=297504782]
+position = Vector2(1180, 143.00002)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("12_62f1r")
+
+[node name="PointLight2D7" type="PointLight2D" parent="." unique_id=1889000427]
+position = Vector2(1045, 349)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("12_62f1r")
+
+[node name="PointLight2D8" type="PointLight2D" parent="." unique_id=2008058775]
+position = Vector2(1370, 144.00003)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("12_62f1r")
