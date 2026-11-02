@@ -1,14 +1,17 @@
 extends CharacterBody2D
+signal enemy_died
 
 var speed = 25
 
 var health = 3
 
-@onready var player = get_node("/root/Node2D/Player")
+@onready var player = get_tree().get_first_node_in_group("Player")
 @onready var anim = $AnimationPlayer
 
 var shoot_interval = 1.5
 var bullet_scene = preload("res://Scenes/enemy_bullet.tscn")
+
+@onready var score = get_tree().current_scene.get_node("Score")
 
 func _ready():
 	anim.play("Walk")
@@ -30,7 +33,11 @@ func take_damage():
 	anim.stop()
 	anim.play("Hurt")
 	health-=1
-	if(health<=0):
+	if health <= 0:
+		if score.has_method("_add_one"):
+			print("Enemigo muerto")
+			score._add_one()
+			enemy_died.emit()
 		queue_free()
 
 func _on_animation_finished(anim_name):
