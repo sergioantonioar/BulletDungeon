@@ -1,64 +1,90 @@
 [gd_scene format=4 uid="uid://by0ep2mr7tqb4"]
 
 [ext_resource type="PackedScene" uid="uid://k8b0uqw5ouek" path="res://Scenes/Player.tscn" id="1_joc8x"]
+[ext_resource type="Script" uid="uid://cniqm050cgxre" path="res://Scenes/level_1.gd" id="1_rpty4"]
 [ext_resource type="Texture2D" uid="uid://d2mc6i68h5ccg" path="res://Assets/tiles/floor_tiles.png" id="2_jghel"]
 [ext_resource type="Texture2D" uid="uid://36r8pgrqd1li" path="res://Assets/tiles/wall_tiles.png" id="3_slnnj"]
 [ext_resource type="PackedScene" uid="uid://d12pijqgd1l45" path="res://Scenes/BatEnemy.tscn" id="4_jghel"]
 [ext_resource type="Texture2D" uid="uid://c4pbc755p0hll" path="res://Assets/Environments/Your1stDungeonbyLuisSn0w.png" id="5_t3or0"]
 [ext_resource type="Texture2D" uid="uid://bii5h5msku51y" path="res://Assets/Environments/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="6_ysn8j"]
-[ext_resource type="PackedScene" uid="uid://tsiusqqniqgm" path="res://Scenes/Door.tscn" id="7_ysn8j"]
+[ext_resource type="PackedScene" uid="uid://catf3bdg0iots" path="res://Scenes/Door.tscn" id="7_ysn8j"]
 [ext_resource type="PackedScene" uid="uid://d4ds823tlu63k" path="res://Scenes/SkeletonEnemy.tscn" id="8_6ll4n"]
 [ext_resource type="Script" uid="uid://jty7wtobpij6" path="res://Scripts/spawner.gd" id="9_kylad"]
 [ext_resource type="PackedScene" uid="uid://d1jkjmy8xx8fm" path="res://Scenes/chest.tscn" id="10_bdlbp"]
+[ext_resource type="PackedScene" uid="uid://iaelkwtxkgwu" path="res://Scenes/score.tscn" id="11_2h8qs"]
+[ext_resource type="Texture2D" uid="uid://cqpn8e2jsodq1" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="13_6jj8j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qumfl"]
 texture = ExtResource("2_jghel")
 0:0/0 = 0
 1:0/0 = 0
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6jj8j"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r08cw"]
 texture = ExtResource("3_slnnj")
 1:0/0 = 0
+1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
+2:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
+3:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
+2:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
+3:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0 = 0
+4:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
+1:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
+2:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
+3:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:2/0 = 0
+4:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:3/0 = 0
+0:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:3/0 = 0
+1:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:3/0 = 0
+2:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:3/0 = 0
+3:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:3/0 = 0
+4:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:4/0 = 0
 0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:4/0 = 0
+1:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:4/0 = 0
+2:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:4/0 = 0
+3:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:4/0 = 0
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -69,12 +95,17 @@ texture = ExtResource("3_slnnj")
 3:5/0 = 0
 3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/0 = 0
+0:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6jj8j")
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_lh34q"]
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qumfl")
 sources/1 = SubResource("TileSetAtlasSource_r08cw")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_06um6"]
+polygon = PackedVector2Array(-6.4749146, -1.2590103, -4.5686493, -3.6549196, 4.6701756, -3.9594965, 6.497635, -1.6244087, 5.888481, -0.91372967, 4.467125, -3.1472921, -4.0610213, -3.1472921)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ll4n"]
 texture = ExtResource("5_t3or0")
@@ -124,6 +155,7 @@ texture = ExtResource("5_t3or0")
 2:7/0 = 0
 3:7/0 = 0
 4:7/0 = 0
+4:7/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_06um6")
 4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.0480537, 3.0205946, -7.0036736, 8, 7.1423597, 8, 7.0480547, 3.0205946)
 5:7/0 = 0
 5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.0052624, 3.1472921, 7.0052624, 3.0457659, 7.0052624, 8, -7.0052624, 8)
@@ -301,12 +333,16 @@ texture = ExtResource("6_ysn8j")
 9:9/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_4kuys"]
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6ll4n")
 sources/1 = SubResource("TileSetAtlasSource_kylad")
 
-[node name="Node2D" type="Node2D" unique_id=737476009]
+[node name="Level1" type="Node2D" unique_id=737476009 node_paths=PackedStringArray("chest_room_spawner", "exit_door")]
 y_sort_enabled = true
+script = ExtResource("1_rpty4")
+chest_room_spawner = NodePath("Spawner4")
+exit_door = NodePath("Door2")
 
 [node name="Player" parent="." unique_id=1774169421 instance=ExtResource("1_joc8x")]
 position = Vector2(309, 528)
@@ -333,14 +369,14 @@ tile_set = SubResource("TileSet_4kuys")
 z_index = 1
 position = Vector2(226, 517)
 
-[node name="Node2D" parent="." unique_id=255549473 instance=ExtResource("7_ysn8j")]
+[node name="Door1" parent="." unique_id=255549473 groups=["Doors"] instance=ExtResource("7_ysn8j")]
 position = Vector2(738, 430)
 
 [node name="CharacterBody2D2" parent="." unique_id=1588269816 instance=ExtResource("8_6ll4n")]
 z_index = 1
 position = Vector2(853, 635)
 
-[node name="Spawner" type="Area2D" parent="." unique_id=1009987210]
+[node name="Spawner" type="Area2D" parent="." unique_id=1009987210 groups=["spawners"]]
 y_sort_enabled = true
 script = ExtResource("9_kylad")
 enemy_scenes = Array[PackedScene]([ExtResource("4_jghel")])
@@ -349,7 +385,7 @@ enemy_scenes = Array[PackedScene]([ExtResource("4_jghel")])
 position = Vector2(-6, -1)
 polygon = PackedVector2Array(148, 489, 142, 588, 227, 580, 253, 581, 254, 613, 161, 617, 186, 639, 423, 631, 440, 591, 358, 585, 356, 546, 467, 549, 472, 487)
 
-[node name="Spawner2" type="Area2D" parent="." unique_id=286485328]
+[node name="Spawner2" type="Area2D" parent="." unique_id=286485328 groups=["spawners"]]
 y_sort_enabled = true
 script = ExtResource("9_kylad")
 enemy_scenes = Array[PackedScene]([ExtResource("4_jghel")])
@@ -358,7 +394,7 @@ enemy_scenes = Array[PackedScene]([ExtResource("4_jghel")])
 position = Vector2(-12, -4)
 polygon = PackedVector2Array(198, 161, 189, 194, 240, 193, 239, 239, 208, 242, 214, 211, 180, 253, 182, 288, 420, 273, 497, 284, 498, 215, 393, 218, 396, 182, 486, 186, 484, 155, 442, 171)
 
-[node name="Spawner3" type="Area2D" parent="." unique_id=654424004]
+[node name="Spawner3" type="Area2D" parent="." unique_id=654424004 groups=["spawners"]]
 y_sort_enabled = true
 script = ExtResource("9_kylad")
 enemy_scenes = Array[PackedScene]([ExtResource("4_jghel")])
@@ -367,7 +403,7 @@ enemy_scenes = Array[PackedScene]([ExtResource("4_jghel")])
 position = Vector2(-14, 1)
 polygon = PackedVector2Array(615, 155, 617, 196, 640, 200, 636, 247, 660, 255, 666, 294, 624, 305, 671, 312, 803, 315, 808, 304, 868, 301, 870, 260, 869, 207, 825, 203, 814, 177, 868, 155)
 
-[node name="Spawner4" type="Area2D" parent="." unique_id=1680530257]
+[node name="Spawner4" type="Area2D" parent="." unique_id=1680530257 groups=["spawners"]]
 y_sort_enabled = true
 script = ExtResource("9_kylad")
 enemy_scenes = Array[PackedScene]([ExtResource("8_6ll4n")])
@@ -378,3 +414,230 @@ polygon = PackedVector2Array(619, 460, 621, 501, 657, 500, 662, 528, 611, 572, 6
 
 [node name="Chest" parent="." unique_id=866996402 instance=ExtResource("10_bdlbp")]
 position = Vector2(737, 612)
+
+[node name="Score" parent="." unique_id=1148567081 instance=ExtResource("11_2h8qs")]
+
+[node name="Door2" parent="." unique_id=1574379825 node_paths=PackedStringArray("tilemap") groups=["Doors"] instance=ExtResource("7_ysn8j")]
+position = Vector2(738, 647)
+is_level_exit = true
+tilemap = NodePath("../TileMapLayer")
+wall_cells = Array[Vector2i]([Vector2i(56, 27), Vector2i(57, 27)])
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1839557338]
+color = Color(0.76240367, 0.76240367, 0.7624038, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2041432087]
+position = Vector2(378, 476.00003)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=906341315]
+position = Vector2(458, 459.00006)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=1890956274]
+position = Vector2(234, 596)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D4" type="PointLight2D" parent="." unique_id=816472339]
+position = Vector2(362, 562)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D5" type="PointLight2D" parent="." unique_id=1150768855]
+position = Vector2(478, 539)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D6" type="PointLight2D" parent="." unique_id=1056555466]
+position = Vector2(148, 219.00002)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D23" type="PointLight2D" parent="." unique_id=2007264414]
+position = Vector2(218, 213.00002)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D24" type="PointLight2D" parent="." unique_id=891846315]
+position = Vector2(393, 199.00002)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D7" type="PointLight2D" parent="." unique_id=1593525678]
+position = Vector2(188, 143)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D8" type="PointLight2D" parent="." unique_id=1910114896]
+position = Vector2(364, 140.00002)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D9" type="PointLight2D" parent="." unique_id=1920262467]
+position = Vector2(496, 157)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D10" type="PointLight2D" parent="." unique_id=677478632]
+position = Vector2(496.00003, 268)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D11" type="PointLight2D" parent="." unique_id=989095277]
+position = Vector2(596, 174)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D12" type="PointLight2D" parent="." unique_id=1421329783]
+position = Vector2(635, 278)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D13" type="PointLight2D" parent="." unique_id=1007109881]
+position = Vector2(714, 140.00002)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D14" type="PointLight2D" parent="." unique_id=1977561952]
+position = Vector2(826, 181)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D15" type="PointLight2D" parent="." unique_id=1270602695]
+position = Vector2(864, 252)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D16" type="PointLight2D" parent="." unique_id=973259755]
+position = Vector2(620, 444)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D17" type="PointLight2D" parent="." unique_id=297599503]
+position = Vector2(795, 445)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D18" type="PointLight2D" parent="." unique_id=1546619949]
+position = Vector2(880, 509.00003)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D19" type="PointLight2D" parent="." unique_id=332069647]
+position = Vector2(581, 603)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D20" type="PointLight2D" parent="." unique_id=998020751]
+position = Vector2(633, 517.00006)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D21" type="PointLight2D" parent="." unique_id=186406061]
+position = Vector2(827, 597.00006)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")
+
+[node name="PointLight2D22" type="PointLight2D" parent="." unique_id=521624170]
+position = Vector2(132, 557.00006)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("13_6jj8j")

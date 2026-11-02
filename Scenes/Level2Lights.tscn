@@ -1,0 +1,149 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://cqpn8e2jsodq1" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="tex_light"]
+
+[node name="Level2Lights" type="Node2D"]
+
+[node name="Luz1" type="PointLight2D" parent="."]
+position = Vector2(245, 190)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz2" type="PointLight2D" parent="."]
+position = Vector2(923, 288)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz3" type="PointLight2D" parent="."]
+position = Vector2(1339, 218)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz4" type="PointLight2D" parent="."]
+position = Vector2(1419, 218)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz5" type="PointLight2D" parent="."]
+position = Vector2(795, 240)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz6" type="PointLight2D" parent="."]
+position = Vector2(539, 160)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz7" type="PointLight2D" parent="."]
+position = Vector2(779, 378)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz8" type="PointLight2D" parent="."]
+position = Vector2(523, 442)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz9" type="PointLight2D" parent="."]
+position = Vector2(1339, 362)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz10" type="PointLight2D" parent="."]
+position = Vector2(331, 522)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz11" type="PointLight2D" parent="."]
+position = Vector2(1227, 362)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz12" type="PointLight2D" parent="."]
+position = Vector2(443, 522)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz13" type="PointLight2D" parent="."]
+position = Vector2(245, 334)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz14" type="PointLight2D" parent="."]
+position = Vector2(1467, 314)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz15" type="PointLight2D" parent="."]
+position = Vector2(443, 80)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")
+
+[node name="Luz16" type="PointLight2D" parent="."]
+position = Vector2(1147, 362)
+scale = Vector2(0.456577, 0.42443764)
+color = Color(0.90514314, 0.74483144, 0.19074544, 1)
+energy = 2.0
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("tex_light")

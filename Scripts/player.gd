@@ -10,6 +10,7 @@ var is_hurt = false
 
 func _ready():
 	$AnimationPlayer.animation_finished.connect(_on_animation_finished)
+	health = GameState.health
 
 func _physics_process(delta: float) -> void:
 	update_health_bar();
@@ -41,6 +42,7 @@ func take_damage(amount):
 		return
 	
 	health-=amount
+	GameState.health = health
 	print("Player recibe daño, salud ahora: ", health)
 	is_hurt=true
 	anim.play("Hurt")
@@ -53,6 +55,7 @@ func _on_animation_finished(anim_name):
 
 func die():
 	print("Player muerto, reiniciamos nivel")
+	GameState.reset()
 	get_tree().reload_current_scene()
 
 func update_health_bar():
@@ -68,4 +71,3 @@ func update_health_bar():
 		fill_style.bg_color = Color.ORANGE
 	else:
 		fill_style.bg_color = Color.GREEN
-	
