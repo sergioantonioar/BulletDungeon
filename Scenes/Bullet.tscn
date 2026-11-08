@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cog50h0ep5ury" path="res://Scripts/Bullet.gd" id="1_4s4u5"]
 [ext_resource type="Texture2D" uid="uid://him5s0fpc572" path="res://Assets/weapons/gun_p.png" id="2_7281b"]
 [ext_resource type="PackedScene" uid="uid://ds7hvg6w6pdno" path="res://Scenes/BulletExplosion.tscn" id="2_qvus8"]
+[ext_resource type="Texture2D" uid="uid://cqpn8e2jsodq1" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="4_pypll"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kuys"]
 radius = 7.0
@@ -17,5 +18,10 @@ shape = SubResource("CircleShape2D_4kuys")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=41365143]
 texture = ExtResource("2_7281b")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=114385613]
+scale = Vector2(-0.090408064, 0.07897544)
+color = Color(1, 1, 0.58431375, 1)
+texture = ExtResource("4_pypll")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

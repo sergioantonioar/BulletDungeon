@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4lqwur2x6c3o" path="res://Scripts/enemy_bullet.gd" id="1_54jiv"]
 [ext_resource type="Texture2D" uid="uid://cnqyi2oef1chk" path="res://Assets/enemies/enemy_ball.png" id="1_tcvu8"]
+[ext_resource type="Texture2D" uid="uid://cqpn8e2jsodq1" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="3_b6yqb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_54jiv"]
 atlas = ExtResource("1_tcvu8")
@@ -46,6 +47,12 @@ frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1681138577]
 shape = SubResource("CircleShape2D_pkshg")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1866965475]
+position = Vector2(-0.034672104, 0)
+scale = Vector2(-0.08497354, 0.080704376)
+color = Color(1, 0.2, 0.26666668, 1)
+texture = ExtResource("3_b6yqb")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
