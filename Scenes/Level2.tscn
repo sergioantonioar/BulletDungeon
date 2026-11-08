@@ -5,17 +5,18 @@
 [ext_resource type="Texture2D" uid="uid://36r8pgrqd1li" path="res://Assets/tiles/wall_tiles.png" id="3_slnnj"]
 [ext_resource type="PackedScene" uid="uid://d12pijqgd1l45" path="res://Scenes/BatEnemy.tscn" id="4_jghel"]
 [ext_resource type="PackedScene" uid="uid://d4ds823tlu63k" path="res://Scenes/SkeletonEnemy.tscn" id="5_slnnj"]
-[ext_resource type="PackedScene" uid="uid://dmmu1fag6p5mh" path="res://Scenes/Skeleton_scythe.tscn" id="20_scythe"]
-[ext_resource type="PackedScene" uid="uid://b5avgkhv7d41a" path="res://Scenes/Vampire.tscn" id="21_vampire"]
-[ext_resource type="PackedScene" path="res://Scenes/Level2Waves.tscn" id="22_waves"]
-[ext_resource type="PackedScene" path="res://Scenes/Level2Details.tscn" id="23_details"]
-[ext_resource type="PackedScene" path="res://Scenes/Level2Lights.tscn" id="24_lights"]
 [ext_resource type="PackedScene" uid="uid://catf3bdg0iots" path="res://Scenes/Door.tscn" id="7_ysn8j"]
 [ext_resource type="PackedScene" uid="uid://d1jkjmy8xx8fm" path="res://Scenes/chest.tscn" id="8_6ll4n"]
 [ext_resource type="Texture2D" uid="uid://c4pbc755p0hll" path="res://Assets/Environments/Your1stDungeonbyLuisSn0w.png" id="9_bdlbp"]
 [ext_resource type="Texture2D" uid="uid://bii5h5msku51y" path="res://Assets/Environments/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="10_2h8qs"]
 [ext_resource type="PackedScene" uid="uid://iaelkwtxkgwu" path="res://Scenes/score.tscn" id="11_au75x"]
 [ext_resource type="Texture2D" uid="uid://cqpn8e2jsodq1" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="12_62f1r"]
+[ext_resource type="Script" uid="uid://38hogceitxty" path="res://Scripts/Flickering.gd" id="17_xx40l"]
+[ext_resource type="PackedScene" uid="uid://dmmu1fag6p5mh" path="res://Scenes/Skeleton_scythe.tscn" id="20_scythe"]
+[ext_resource type="PackedScene" uid="uid://b5avgkhv7d41a" path="res://Scenes/Vampire.tscn" id="21_vampire"]
+[ext_resource type="PackedScene" path="res://Scenes/Level2Waves.tscn" id="22_waves"]
+[ext_resource type="PackedScene" path="res://Scenes/Level2Details.tscn" id="23_details"]
+[ext_resource type="PackedScene" uid="uid://wr513isrx2ao" path="res://Scenes/Level2Lights.tscn" id="24_lights"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_00287"]
 texture = ExtResource("2_jghel")
@@ -413,6 +414,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("12_62f1r")
+script = ExtResource("17_xx40l")
 
 [node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1951849577]
 position = Vector2(299, 80)
@@ -422,6 +424,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("12_62f1r")
+script = ExtResource("17_xx40l")
 
 [node name="PointLight2D3" type="PointLight2D" parent="." unique_id=812803547]
 position = Vector2(731, 158)
@@ -431,6 +434,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("12_62f1r")
+script = ExtResource("17_xx40l")
 
 [node name="PointLight2D4" type="PointLight2D" parent="." unique_id=20249676]
 position = Vector2(619, 392.00003)
@@ -440,6 +444,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("12_62f1r")
+script = ExtResource("17_xx40l")
 
 [node name="PointLight2D5" type="PointLight2D" parent="." unique_id=1141251459]
 position = Vector2(1045, 190.00003)
@@ -449,6 +454,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("12_62f1r")
+script = ExtResource("17_xx40l")
 
 [node name="PointLight2D6" type="PointLight2D" parent="." unique_id=297504782]
 position = Vector2(1180, 143.00002)
@@ -458,6 +464,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("12_62f1r")
+script = ExtResource("17_xx40l")
 
 [node name="PointLight2D7" type="PointLight2D" parent="." unique_id=1889000427]
 position = Vector2(1045, 349)
@@ -467,6 +474,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("12_62f1r")
+script = ExtResource("17_xx40l")
 
 [node name="PointLight2D8" type="PointLight2D" parent="." unique_id=2008058775]
 position = Vector2(1370, 144.00003)
@@ -476,3 +484,4 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("12_62f1r")
+script = ExtResource("17_xx40l")

@@ -1,10 +1,11 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://wr513isrx2ao"]
 
+[ext_resource type="Script" uid="uid://38hogceitxty" path="res://Scripts/Flickering.gd" id="2_i713o"]
 [ext_resource type="Texture2D" uid="uid://cqpn8e2jsodq1" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="tex_light"]
 
-[node name="Level2Lights" type="Node2D"]
+[node name="Level2Lights" type="Node2D" unique_id=1635114303]
 
-[node name="Luz1" type="PointLight2D" parent="."]
+[node name="Luz1" type="PointLight2D" parent="." unique_id=268975946]
 position = Vector2(245, 190)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -12,8 +13,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz2" type="PointLight2D" parent="."]
+[node name="Luz2" type="PointLight2D" parent="." unique_id=573489015]
 position = Vector2(923, 288)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -21,8 +23,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz3" type="PointLight2D" parent="."]
+[node name="Luz3" type="PointLight2D" parent="." unique_id=121549398]
 position = Vector2(1339, 218)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -30,8 +33,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz4" type="PointLight2D" parent="."]
+[node name="Luz4" type="PointLight2D" parent="." unique_id=541077277]
 position = Vector2(1419, 218)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -39,8 +43,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz5" type="PointLight2D" parent="."]
+[node name="Luz5" type="PointLight2D" parent="." unique_id=1259246293]
 position = Vector2(795, 240)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -48,8 +53,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz6" type="PointLight2D" parent="."]
+[node name="Luz6" type="PointLight2D" parent="." unique_id=1879853851]
 position = Vector2(539, 160)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -57,8 +63,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz7" type="PointLight2D" parent="."]
+[node name="Luz7" type="PointLight2D" parent="." unique_id=745765987]
 position = Vector2(779, 378)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -66,8 +73,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz8" type="PointLight2D" parent="."]
+[node name="Luz8" type="PointLight2D" parent="." unique_id=82319072]
 position = Vector2(523, 442)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -75,8 +83,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz9" type="PointLight2D" parent="."]
+[node name="Luz9" type="PointLight2D" parent="." unique_id=1992595701]
 position = Vector2(1339, 362)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -84,8 +93,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz10" type="PointLight2D" parent="."]
+[node name="Luz10" type="PointLight2D" parent="." unique_id=1724913430]
 position = Vector2(331, 522)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -93,8 +103,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz11" type="PointLight2D" parent="."]
+[node name="Luz11" type="PointLight2D" parent="." unique_id=453775176]
 position = Vector2(1227, 362)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -102,8 +113,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz12" type="PointLight2D" parent="."]
+[node name="Luz12" type="PointLight2D" parent="." unique_id=1084413436]
 position = Vector2(443, 522)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -111,8 +123,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz13" type="PointLight2D" parent="."]
+[node name="Luz13" type="PointLight2D" parent="." unique_id=1704040986]
 position = Vector2(245, 334)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -120,8 +133,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz14" type="PointLight2D" parent="."]
+[node name="Luz14" type="PointLight2D" parent="." unique_id=1572140974]
 position = Vector2(1467, 314)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -129,8 +143,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz15" type="PointLight2D" parent="."]
+[node name="Luz15" type="PointLight2D" parent="." unique_id=301569557]
 position = Vector2(443, 80)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -138,8 +153,9 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")
 
-[node name="Luz16" type="PointLight2D" parent="."]
+[node name="Luz16" type="PointLight2D" parent="." unique_id=432760493]
 position = Vector2(1147, 362)
 scale = Vector2(0.456577, 0.42443764)
 color = Color(0.90514314, 0.74483144, 0.19074544, 1)
@@ -147,3 +163,4 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("tex_light")
+script = ExtResource("2_i713o")

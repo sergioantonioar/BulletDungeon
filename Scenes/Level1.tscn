@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d1jkjmy8xx8fm" path="res://Scenes/chest.tscn" id="10_bdlbp"]
 [ext_resource type="PackedScene" uid="uid://iaelkwtxkgwu" path="res://Scenes/score.tscn" id="11_2h8qs"]
 [ext_resource type="Texture2D" uid="uid://cqpn8e2jsodq1" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="13_6jj8j"]
+[ext_resource type="Script" uid="uid://38hogceitxty" path="res://Scripts/Flickering.gd" id="14_06um6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qumfl"]
 texture = ExtResource("2_jghel")
@@ -434,6 +435,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D2" type="PointLight2D" parent="." unique_id=906341315]
 position = Vector2(458, 459.00006)
@@ -443,6 +445,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D3" type="PointLight2D" parent="." unique_id=1890956274]
 position = Vector2(234, 596)
@@ -452,6 +455,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D4" type="PointLight2D" parent="." unique_id=816472339]
 position = Vector2(362, 562)
@@ -461,6 +465,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D5" type="PointLight2D" parent="." unique_id=1150768855]
 position = Vector2(478, 539)
@@ -470,6 +475,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D6" type="PointLight2D" parent="." unique_id=1056555466]
 position = Vector2(148, 219.00002)
@@ -479,6 +485,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D23" type="PointLight2D" parent="." unique_id=2007264414]
 position = Vector2(218, 213.00002)
@@ -488,6 +495,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D24" type="PointLight2D" parent="." unique_id=891846315]
 position = Vector2(393, 199.00002)
@@ -497,6 +505,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D7" type="PointLight2D" parent="." unique_id=1593525678]
 position = Vector2(188, 143)
@@ -506,6 +515,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D8" type="PointLight2D" parent="." unique_id=1910114896]
 position = Vector2(364, 140.00002)
@@ -515,6 +525,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D9" type="PointLight2D" parent="." unique_id=1920262467]
 position = Vector2(496, 157)
@@ -524,6 +535,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D10" type="PointLight2D" parent="." unique_id=677478632]
 position = Vector2(496.00003, 268)
@@ -533,6 +545,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D11" type="PointLight2D" parent="." unique_id=989095277]
 position = Vector2(596, 174)
@@ -542,6 +555,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D12" type="PointLight2D" parent="." unique_id=1421329783]
 position = Vector2(635, 278)
@@ -551,6 +565,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D13" type="PointLight2D" parent="." unique_id=1007109881]
 position = Vector2(714, 140.00002)
@@ -560,6 +575,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D14" type="PointLight2D" parent="." unique_id=1977561952]
 position = Vector2(826, 181)
@@ -569,6 +585,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D15" type="PointLight2D" parent="." unique_id=1270602695]
 position = Vector2(864, 252)
@@ -578,6 +595,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D16" type="PointLight2D" parent="." unique_id=973259755]
 position = Vector2(620, 444)
@@ -587,6 +605,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D17" type="PointLight2D" parent="." unique_id=297599503]
 position = Vector2(795, 445)
@@ -596,6 +615,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D18" type="PointLight2D" parent="." unique_id=1546619949]
 position = Vector2(880, 509.00003)
@@ -605,6 +625,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D19" type="PointLight2D" parent="." unique_id=332069647]
 position = Vector2(581, 603)
@@ -614,6 +635,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D20" type="PointLight2D" parent="." unique_id=998020751]
 position = Vector2(633, 517.00006)
@@ -623,6 +645,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D21" type="PointLight2D" parent="." unique_id=186406061]
 position = Vector2(827, 597.00006)
@@ -632,6 +655,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D22" type="PointLight2D" parent="." unique_id=521624170]
 position = Vector2(132, 558)
@@ -641,6 +665,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D29" type="PointLight2D" parent="." unique_id=1712801452]
 position = Vector2(196, 461.00006)
@@ -650,6 +675,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D25" type="PointLight2D" parent="." unique_id=1925376399]
 position = Vector2(314, 428)
@@ -659,6 +685,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D26" type="PointLight2D" parent="." unique_id=498742414]
 position = Vector2(228, 383)
@@ -668,6 +695,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D27" type="PointLight2D" parent="." unique_id=1669103089]
 position = Vector2(538, 189.00002)
@@ -677,6 +705,7 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
 
 [node name="PointLight2D28" type="PointLight2D" parent="." unique_id=1636936734]
 position = Vector2(709, 364.00003)
@@ -686,3 +715,4 @@ energy = 2.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("13_6jj8j")
+script = ExtResource("14_06um6")
