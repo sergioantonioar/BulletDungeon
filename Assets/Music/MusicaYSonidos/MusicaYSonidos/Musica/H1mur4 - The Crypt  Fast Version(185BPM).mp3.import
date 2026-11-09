@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2wsb8r136ldd"
+path="res://.godot/imported/H1mur4 - The Crypt  Fast Version(185BPM).mp3-2dc0e2728ee2fe1251b4431c31f31df0.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/MusicaYSonidos/MusicaYSonidos/Musica/H1mur4 - The Crypt  Fast Version(185BPM).mp3"
+dest_files=["res://.godot/imported/H1mur4 - The Crypt  Fast Version(185BPM).mp3-2dc0e2728ee2fe1251b4431c31f31df0.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

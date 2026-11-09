@@ -12,7 +12,7 @@ func _ready():
 	$AnimationPlayer.animation_finished.connect(_on_animation_finished)
 	health = GameState.health
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta):
 	update_health_bar();
 	var direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	velocity=direction*speed

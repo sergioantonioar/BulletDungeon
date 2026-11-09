@@ -17,9 +17,8 @@ func _ready():
 	anim.play("Walk")
 	anim.connect("animation_finished", self._on_animation_finished)
 	start_shoot_loop()
-	
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta):
 	var direction = global_position.direction_to(player.global_position)
 	velocity = direction*speed
 	move_and_slide()

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cehsim3rlxlpw"]
+
+[ext_resource type="AudioStream" uid="uid://butlii04qs5w5" path="res://Assets/Music/MusicaYSonidos/MusicaYSonidos/Musica/H1mur4 - The Crypt.mp3" id="1_dygvs"]
+[ext_resource type="Script" uid="uid://1nip7w8xre3m" path="res://Scripts/audio_manager.gd" id="1_u6owb"]
+[ext_resource type="AudioStream" uid="uid://c5xaulcw42une" path="res://Assets/Music/MusicaYSonidos/MusicaYSonidos/Sonidos/Shoot2.mp3" id="2_i2xd5"]
+[ext_resource type="AudioStream" uid="uid://cufbo8vso6n2h" path="res://Assets/Music/MusicaYSonidos/MusicaYSonidos/Sonidos/BowRelease.mp3" id="4_yq78e"]
+
+[node name="AudioManager" type="Node2D" unique_id=1519750200]
+script = ExtResource("1_u6owb")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1648891920]
+stream = ExtResource("1_dygvs")
+volume_db = -35.0
+
+[node name="Shoot" type="AudioStreamPlayer" parent="." unique_id=1401495081]
+stream = ExtResource("2_i2xd5")
+volume_db = -30.0
+pitch_scale = 1.25
+
+[node name="Bow" type="AudioStreamPlayer" parent="." unique_id=1769145408]
+stream = ExtResource("4_yq78e")
+volume_db = -10.873

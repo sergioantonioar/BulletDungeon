@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0j0l67abtt7b"
+path="res://.godot/imported/Desecrated Cave ver.1.wav-4010c5df345d4c9c3e52810b9b841abc.sample"
+
+[deps]
+
+source_file="res://Assets/Music/MusicaYSonidos/MusicaYSonidos/Musica/Desecrated Cave ver.1.wav"
+dest_files=["res://.godot/imported/Desecrated Cave ver.1.wav-4010c5df345d4c9c3e52810b9b841abc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bepsm2y3nd20c" path="res://Scripts/bat_enemy.gd" id="1_ew0y8"]
 [ext_resource type="Texture2D" uid="uid://c8qfgrtwpdls8" path="res://Assets/enemies/e1.png" id="1_wh78i"]
 [ext_resource type="Texture2D" uid="uid://ctstjmixjkkeo" path="res://Assets/shadows/ss3.png" id="3_40kae"]
+[ext_resource type="AudioStream" uid="uid://cnp4wqi2qcu0a" path="res://Assets/Music/MusicaYSonidos/MusicaYSonidos/Sonidos/BatChriping.mp3" id="4_l1gpn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lh34q"]
 radius = 9.0
@@ -80,3 +81,10 @@ libraries/ = SubResource("AnimationLibrary_l1gpn")
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=818936889]
 position = Vector2(0, 12)
 texture = ExtResource("3_40kae")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1665737136]
+stream = ExtResource("4_l1gpn")
+volume_db = -20.0
+pitch_scale = 1.2
+autoplay = true
+max_distance = 100.0

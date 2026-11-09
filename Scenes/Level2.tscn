@@ -344,7 +344,7 @@ sources/2 = SubResource("TileSetAtlasSource_6jj8j")
 y_sort_enabled = true
 
 [node name="Player" parent="." unique_id=642790227 instance=ExtResource("1_joc8x")]
-position = Vector2(528, 286)
+position = Vector2(386, 513)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1663578593 groups=["Walls"]]
 position = Vector2(35, 22)
