@@ -63,6 +63,7 @@ func equip_weapon(delta):
 
 
 func pickup_weapon_by_name(_weapon_name):
+	AudioManager.pickup_item()
 	for weapon in get_children():
 		if weapon.name == _weapon_name:
 			if weapon not in owned_weapons:

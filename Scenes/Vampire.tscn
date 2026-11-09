@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://vyrkjp7qd4k4" path="res://Assets/enemies/skeleton_scythe/enemies-vampire_take_damage.png" id="4_oj8qw"]
 [ext_resource type="Texture2D" uid="uid://ln3a1ipfocsn" path="res://Assets/enemies/skeleton_scythe/enemies-vampire_idle.png" id="5_ec18f"]
 [ext_resource type="Texture2D" uid="uid://6m1g7pi1p8au" path="res://Assets/enemies/skeleton_scythe/enemies-vampire_movement.png" id="6_oj8qw"]
+[ext_resource type="AudioStream" uid="uid://kgmx5wlos4cj" path="res://Assets/Music/MusicaYSonidos/MusicaYSonidos/Sonidos/vampireRoar.mp3" id="7_ec18f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_op3gm"]
 radius = 8.0
@@ -407,3 +408,8 @@ position = Vector2(3, -2)
 sprite_frames = SubResource("SpriteFrames_0vtqy")
 animation = &"move"
 frame_progress = 0.560299
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="." unique_id=658820392]
+stream = ExtResource("7_ec18f")
+volume_db = -11.0
+pitch_scale = 1.25

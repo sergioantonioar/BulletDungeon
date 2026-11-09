@@ -29,6 +29,7 @@ var _knockback: Vector2 = Vector2.ZERO
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var body_shape: CollisionShape2D = $CollisionShape2D
 
+@onready var attack_sound: AudioStreamPlayer2D = get_node_or_null("AttackSound")
 
 func _ready() -> void:
 	health = max_health
@@ -102,6 +103,9 @@ func _start_attack() -> void:
 	_hit_done = false
 	velocity = Vector2.ZERO
 	sprite.play("attack")
+	
+	if attack_sound:
+		attack_sound.play()
 
 
 func _die() -> void:

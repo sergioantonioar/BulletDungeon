@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://1nip7w8xre3m" path="res://Scripts/audio_manager.gd" id="1_u6owb"]
 [ext_resource type="AudioStream" uid="uid://c5xaulcw42une" path="res://Assets/Music/MusicaYSonidos/MusicaYSonidos/Sonidos/Shoot2.mp3" id="2_i2xd5"]
 [ext_resource type="AudioStream" uid="uid://cufbo8vso6n2h" path="res://Assets/Music/MusicaYSonidos/MusicaYSonidos/Sonidos/BowRelease.mp3" id="4_yq78e"]
+[ext_resource type="AudioStream" uid="uid://cma70sjgbc6da" path="res://Assets/Music/MusicaYSonidos/MusicaYSonidos/Sonidos/TakeItem.mp3" id="5_ncvnl"]
 
 [node name="AudioManager" type="Node2D" unique_id=1519750200]
 script = ExtResource("1_u6owb")
@@ -20,3 +21,6 @@ pitch_scale = 1.25
 [node name="Bow" type="AudioStreamPlayer" parent="." unique_id=1769145408]
 stream = ExtResource("4_yq78e")
 volume_db = -10.873
+
+[node name="pickupItem" type="AudioStreamPlayer" parent="." unique_id=1871265401]
+stream = ExtResource("5_ncvnl")

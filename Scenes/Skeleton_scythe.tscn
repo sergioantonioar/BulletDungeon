@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://chta71r5kmm2h" path="res://Assets/enemies/skeleton_scythe/enemies-skeleton1_take_damage.png" id="4_qfqis"]
 [ext_resource type="Texture2D" uid="uid://cwyhx245xnwf" path="res://Assets/enemies/skeleton_scythe/enemies-skeleton1_idle.png" id="5_84pgq"]
 [ext_resource type="Texture2D" uid="uid://b7nojic812voe" path="res://Assets/enemies/skeleton_scythe/enemies-skeleton1_movement.png" id="6_t42rt"]
+[ext_resource type="AudioStream" uid="uid://bwb6objwvho4f" path="res://Assets/Music/MusicaYSonidos/MusicaYSonidos/Sonidos/swordEfect.mp3" id="7_evpcd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oj8qw"]
 radius = 8.0
@@ -390,3 +391,8 @@ sprite_frames = SubResource("SpriteFrames_0vtqy")
 animation = &"death"
 frame = 16
 frame_progress = 1.0
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="." unique_id=984242611]
+stream = ExtResource("7_evpcd")
+volume_db = -35.0
+pitch_scale = 1.2

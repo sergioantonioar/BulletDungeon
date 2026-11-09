@@ -14,3 +14,6 @@ func play_shoot_sound():
 
 func play_shoot_bow_sound():
 	$Bow.play()
+
+func pickup_item():
+	$pickupItem.play()
