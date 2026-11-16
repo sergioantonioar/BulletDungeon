@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b7kymt4fw7odv" path="res://Scripts/ui_weapon.gd" id="1_063aa"]
 [ext_resource type="Texture2D" uid="uid://bhlm701vtbfqs" path="res://Assets/weapons/gun.png" id="2_q7yue"]
+[ext_resource type="PackedScene" uid="uid://bolodsplnqnqu" path="res://addons/virtual_joystick_cf/virtual_joystick_cf.tscn" id="3_063aa"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1532023526]
 script = ExtResource("1_063aa")
@@ -50,3 +51,18 @@ offset_top = -66.0
 offset_right = 39.0
 offset_bottom = 40.0
 texture = ExtResource("2_q7yue")
+
+[node name="VirtualJoystickCF" parent="." unique_id=912784726 instance=ExtResource("3_063aa")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 145.00002
+offset_top = -147.0
+offset_right = 145.00002
+offset_bottom = -147.0
+grow_vertical = 0
+scale = Vector2(1.0009415, 0.99858165)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+joystick_scale = 0.8109999999999999
+metadata/_edit_use_anchors_ = true
